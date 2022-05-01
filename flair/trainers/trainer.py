@@ -201,7 +201,7 @@ class ModelTrainer:
                 from torch.utils.tensorboard import SummaryWriter
 
                 if tensorboard_log_dir is not None and not os.path.exists(tensorboard_log_dir):
-                    os.mkdir(tensorboard_log_dir)
+                    os.makedirs(tensorboard_log_dir)
                 writer = SummaryWriter(log_dir=tensorboard_log_dir, comment=tensorboard_comment)
                 log.info(f"tensorboard logging path is {tensorboard_log_dir}")
 
